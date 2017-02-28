@@ -26,7 +26,7 @@ function init( option ) {
 
         var hourNumbers = [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2 ];
         hourNumbers.forEach( function ( number, i ) {
-            ctxbg.font = r / 6 + "px Arial";
+            ctxbg.font = r / 7 + "px Arial";
             ctxbg.textAlign = "center";
             ctxbg.textBaseline = "middle";
             var rad = 2 * Math.PI / 12 * i,
