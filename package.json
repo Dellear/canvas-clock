@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install && anywhere 8888"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.coding.net:Deller/canvas_clock.git"
+    "url": "git@github.com:Dellear/canvas-clock.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "grunt": "^1.0.1"
+  "dependencies": {},
+  "devDependencies": {
+    "anywhere": "^1.4.0"
   }
 }
