@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install && anywhere 8888"
+    "prestart": "yarn",
+    "start": "anywhere 8888"
   },
   "repository": {
     "type": "git",

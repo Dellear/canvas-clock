@@ -4,7 +4,7 @@
 
 ``` bash
 # to run this project
-npm start
+yarn start
 
 ```
 ### it is just a demo,to show a simple canvas
