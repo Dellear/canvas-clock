@@ -1,4 +1,5 @@
-function init(option) {
+function init(option) { // eslint-disable-line
+    'use strict';
     var container = document.getElementById('container'),
         clockbg = document.createElement('canvas'),
         clock = document.createElement('canvas');
@@ -12,8 +13,8 @@ function init(option) {
     container.appendChild(clockbg);
     container.appendChild(clock);
 
-    ctxbg = clockbg.getContext('2d')
-    ctx = clock.getContext('2d'),
+    var ctxbg = clockbg.getContext('2d'),
+        ctx = clock.getContext('2d'),
         r = option.width / 2; //r=100
     clockbg.width = clockbg.height = clock.width = clock.height = 2 * r;
 
@@ -25,7 +26,7 @@ function init(option) {
         ctxbg.stroke();
 
         var hourNumbers = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];
-        hourNumbers.forEach(function (number, i) {
+        hourNumbers.forEach(function(number, i) {
             ctxbg.font = r / 7 + 'px Arial';
             ctxbg.textAlign = 'center';
             ctxbg.textBaseline = 'middle';
@@ -138,4 +139,4 @@ function init(option) {
     drawBackground();
     draw();
     setInterval(draw, 1000);
-};
+}
