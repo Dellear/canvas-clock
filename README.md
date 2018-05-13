@@ -2,6 +2,9 @@
 
 > canvas clock for web
 
+## Demo
+[https://dellear.github.io/canvas-clock/](https://dellear.github.io/canvas-clock/)
+
 ``` bash
 # to run this project
 yarn start
