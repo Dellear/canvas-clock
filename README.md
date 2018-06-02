@@ -6,8 +6,8 @@
 [https://dellear.github.io/canvas-clock/](https://dellear.github.io/canvas-clock/)
 
 ``` bash
-# to run this project
-yarn start
+# run the demo
+npm start
 
 ```
 ### it is just a demo,to show a simple canvas
