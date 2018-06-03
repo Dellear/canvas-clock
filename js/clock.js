@@ -27,7 +27,7 @@
         this.draw();
         this.interval = setInterval(function () {
             T.draw();
-        }, 1000);
+        }, 100);
     }
 
     /**
@@ -218,7 +218,8 @@
         var ctx = this.ctx,
             r = this.r,
             second = date.getSeconds(),
-            rad = 2 * Math.PI / 60 * second;
+            millisecond = date.getMilliseconds(),
+            rad = 2 * Math.PI / 60 * ( second + millisecond /1000);
 
         ctx.save();
         ctx.beginPath();
