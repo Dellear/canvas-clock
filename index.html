@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>canvas时钟</title>
     <style type="text/css">
-        div {
+        #container {
             margin: 100px auto;
+            width: calc(100% - 900px);
+            min-width: 300px;
         }
     </style>
 </head>
@@ -17,9 +19,14 @@
 </body>
 <script src="js/clock.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-    new Clock({
-        id: 'container',
-        width: 300
+    var clock = new Clock({
+        id: 'container'
+    });
+
+    // 相应window resize事件
+    window.addEventListener('resize', function () {
+        clock.destroy();
+        clock.init();
     });
 </script>
 

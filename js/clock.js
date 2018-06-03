@@ -4,12 +4,12 @@
     function Clock(option) {
         this.id = option.id;
         this.option = option;
-        this.r = this.option.width / 2;
         this.clock = null;
         this.ctx = null;
         this.clockbg = null;
         this.ctxbg = null;
         this.interval = null;
+        this.destroy();
         this.init();
     }
 
@@ -22,7 +22,6 @@
      */
     Clock.prototype.init = function () {
         var T = this;
-        this.destroy();
         this.createContainer();
         this.drawBackground();
         this.draw();
@@ -115,13 +114,16 @@
         var container = document.getElementById(this.id),
             clockbg = document.createElement('canvas'),
             clock = document.createElement('canvas');
+        
+        this.width = container.offsetWidth;
+        this.r = this.width / 2;
         clockbg.id = 'clockbg';
         clock.id = 'clock';
         container.style.position = 'relative';
         clockbg.style.position = clock.style.position = 'absolute';
-        container.style.width = container.style.height = this.option.width + 'px';
+        container.style.height = this.width + 'px';   // 处理成方形
         clockbg.style.left = clockbg.style.top = clock.style.left = clock.style.top = 0;
-        clockbg.style.width = clockbg.style.height = clock.style.width = clock.style.height = this.option.width + 'px';
+        clockbg.style.width = clockbg.style.height = clock.style.width = clock.style.height = this.width + 'px';
         container.appendChild(clockbg);
         container.appendChild(clock);
 
@@ -243,7 +245,7 @@
     }
 
     Clock.prototype.preDraw = function () {
-        this.ctx.clearRect(0, 0, this.option.width, this.option.width);
+        this.ctx.clearRect(0, 0, this.width, this.width);
         this.ctx.save();
         this.ctx.translate(this.r, this.r);
     }
