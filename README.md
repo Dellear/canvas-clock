@@ -10,4 +10,5 @@
 npm start
 
 ```
+![image](https://github.com/Dellear/canvas-clock/raw/master/demo.png)
 ### it is just a demo,to show a simple canvas
